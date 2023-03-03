@@ -1,5 +1,5 @@
-export const ROUTER: { [k: string]: { path: string } } = {
-  home: {
-    path: '/',
-  },
-};
+// NOTE: main screen
+export const MAIN_PATH = '/';
+
+// NOTE: login screen
+export const LOGIN_PATH = '/login';

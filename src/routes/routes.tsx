@@ -1,12 +1,13 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { ROUTER } from './const';
-import { HomeScreen } from '../screens';
+import { LOGIN_PATH, MAIN_PATH } from './const';
+import { HomeScreen, KakaoAuthScreen, LoginScreen } from '../screens';
 
 function AppRouter() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path={ROUTER.home.path} element={<HomeScreen />} />
+        <Route path={MAIN_PATH} element={<HomeScreen />} />
+        <Route path={LOGIN_PATH} element={<LoginScreen />} />
       </Routes>
     </BrowserRouter>
   );

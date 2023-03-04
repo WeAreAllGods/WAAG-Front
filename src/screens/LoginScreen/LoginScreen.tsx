@@ -1,4 +1,7 @@
-import { Layout } from '../../components';
+import { Stack } from '@mui/material';
+import { Layout, LoginButton } from '../../components';
+
+const { VITE_KAKAO_LOGIN_PATH } = import.meta.env;
 
 function LoginScreen() {
   // 1. destructure props
@@ -9,7 +12,30 @@ function LoginScreen() {
   // 6. calculate values
   // 7. effect hooks
   // 8. handlers
-  return <Layout width="80%">여기는 로그인 페이지입니다.</Layout>;
+
+  return (
+    <Layout>
+      <Stack
+        css={{
+          maxWidth: '25%',
+          height: '50%',
+          margin: '0 auto',
+          backgroundColor: '#E2D9D9',
+          borderRadius: '12px',
+        }}
+      >
+        <Stack spacing={4} css={{ justifyContent: 'center', alignItems: 'center' }}>
+          <LoginButton href={VITE_KAKAO_LOGIN_PATH} backgroundColor="#FFE500">
+            카카오로 로그인
+          </LoginButton>
+          {/* <LoginButton backgroundColor="#0D1117" color="#FFF"> */}
+          {/*  GITHUB로 로그인 */}
+          {/* </LoginButton> */}
+          {/* <LoginButton backgroundColor="#FFF">구글로 로그인</LoginButton> */}
+        </Stack>
+      </Stack>
+    </Layout>
+  );
 }
 
 export { LoginScreen };

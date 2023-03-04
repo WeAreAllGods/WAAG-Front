@@ -12,7 +12,19 @@ function Layout(props: { children: ReactNode }) {
   // 6. calculate values
   // 7. effect hooks
   // 8. handlers
-  return <Box css={{ margin: '0 auto', backgroundColor: 'red' }}>{children}</Box>;
+  return (
+    <Box
+      css={{
+        width: '100%',
+        height: '100vh',
+        padding: '144px 0',
+        margin: '0 auto',
+        backgroundColor: 'red',
+      }}
+    >
+      {children}
+    </Box>
+  );
 }
 
 export { Layout };

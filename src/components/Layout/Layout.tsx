@@ -19,7 +19,6 @@ function Layout(props: { children: ReactNode }) {
         height: '100vh',
         padding: '144px 0',
         margin: '0 auto',
-        backgroundColor: 'red',
       }}
     >
       {children}

@@ -17,9 +17,15 @@ export const useLogin: (
     ({ variables, onError }: { variables: { code: string }; onError: (error: Error) => void }) => {
       setLoading(true);
       httpClient
-        .post<{ token: string; nickname: string }>('/users/kakao/login', variables)
+        .post<{ data: { token: string; email: string; nickname: string } }>(
+          '/users/kakao/login',
+          variables
+        )
         .then((response) => {
-          console.log(response);
+          const { token, email, nickname } = response.data.data;
+          if (!token && !nickname) {
+            navigator('/signup', { state: { email } });
+          }
         })
         .catch((error) => onError(error))
         .finally(() => setLoading(false));

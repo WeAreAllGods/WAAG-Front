@@ -16,11 +16,11 @@ function LoginScreen() {
   return (
     <Layout>
       <Stack
+        boxShadow={2}
         css={{
           maxWidth: '25%',
           height: '50%',
           margin: '0 auto',
-          backgroundColor: '#E2D9D9',
           borderRadius: '12px',
         }}
       >

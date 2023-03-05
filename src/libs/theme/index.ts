@@ -5,6 +5,8 @@ const theme = createTheme({
     MuiButton: {
       defaultProps: {
         disableRipple: true,
+        color: 'primary',
+        variant: 'contained',
       },
     },
     MuiInputAdornment: {
